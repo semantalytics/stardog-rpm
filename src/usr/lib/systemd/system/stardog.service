@@ -1,0 +1,7 @@
+[Unit]
+Type=simple
+EnvironmentFile=-/etc/sysconfig/stardog
+ExecStart=/usr/bin/stardog-admin server start $STARDOG_OPTS --forground
+ExecStop=/urs/bin/stardog-admin server stop
+User=stardog
+Group=stardog
