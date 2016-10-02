@@ -1,6 +1,3 @@
-%define __spec_install_post %{nill}
-%define   debug_package %{nill}
-
 Name: Stardog
 Version: @build.ver@
 Release: 1%{?dist}
