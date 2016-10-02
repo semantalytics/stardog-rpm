@@ -16,7 +16,7 @@ BuildRequires:
 Requires:	java >= @java.version@
 
 %description
-
+Stardog is an enterprise data unification platform built on smart graph technology: query, search, inference, and data virtualization.
 
 %prep
 %setup -q
