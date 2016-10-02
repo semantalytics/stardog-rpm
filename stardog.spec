@@ -2,17 +2,18 @@
 %define   debug_package %{nill}
 
 Name: Stardog
-Version: 4.0.5
+Version: @build.ver@
 Release: 1%{?dist}
-Summary:	
+Summary: Stardog database
 
-Group:	
+Group: Applications/Databases
 License: Stardog
-URL:		
-Source0:	
+URL: http://www.stardog.com
+Source0: ${name}-${version}.zip
+BuildArch: noarch
 
 BuildRequires:	
-Requires:	
+Requires:	java >= @java.version@
 
 %description
 
