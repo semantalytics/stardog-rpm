@@ -1,3 +1,0 @@
-STARDOG_HOME="/var/lib/stardog"
-STARDOG="/opt/stardog"
-STARDOG_JAVA_ARGS="-Djava
