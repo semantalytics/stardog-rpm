@@ -40,9 +40,8 @@ Build rpm
 
 Log out and log back in to pick up environment variables 
 
-```
-[userid@hostname ~]$ # download license key
-```
+download license key
+
 ```
 [userid@hostname ~]$ wget --content-disposition --directory-prefix $STARDOG_HOME 'http://mandrillapp.com/track/click/30526154/stardog.s3-website-us-east-1.amazonaws.com?p=eyJzIjoid1dnQ3FLY...'
 ```
