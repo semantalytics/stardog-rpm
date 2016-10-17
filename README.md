@@ -40,19 +40,26 @@ Build rpm
 
 Log out and log back in to pick up environment variables 
 
-download license key
+download license key and update permissions
 
 ```
-[userid@hostname ~]$ wget --content-disposition --directory-prefix $STARDOG_HOME 'http://mandrillapp.com/track/click/30526154/stardog.s3-website-us-east-1.amazonaws.com?p=eyJzIjoid1dnQ3FLY...'
+[userid@hostname ~]$ sudo wget --content-disposition --directory-prefix $STARDOG_HOME 'http://mandrillapp.com/track/click/30526154/stardog.s3-website-us-east-1.amazonaws.com?p=eyJzIjoid1dnQ3FLY...'
+[userid@hostname ~]$ sudo chmod stardog.stardog $STARDOG_HOME/stardog-license-key.bin
 ```
+
+Users must be members of the stardog group
 
 ```
 [userid@hostname ~]$ sudo usermod -a -G stardog userid
 ```
 
+Start Stardog at system start
+
 ```
 [userid@hostname ~]$ sudo systemctl enable stardog
 ```
+
+Start Stardog
 
 ```
 [userid@hostname ~]$ sudo systemctl start stardog
