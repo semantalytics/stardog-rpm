@@ -440,10 +440,10 @@ rm -rf ${RPM_BUILD_ROOT}
 %attr(644,root,root)/usr/lib/systemd/system/stardog.service
 
 %changelog
-* Sun Oct 02 2016 Zachary Whitley <zachary.whitley@semantalytics.com>
-- Initial spec
 * Sat Jan 14 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
 - Update to Stardog 4.2.2
+* Sun Oct 02 2016 Zachary Whitley <zachary.whitley@semantalytics.com>
+- Initial spec
 
 # TODO
 #separate rpm for javadoc? client? server?
