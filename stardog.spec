@@ -441,10 +441,9 @@ rm -rf ${RPM_BUILD_ROOT}
 
 %changelog
 * Sun Oct 02 2016 Zachary Whitley <zachary.whitley@semantalytics.com>
-- blah blah blah
+- Initial spec
+* Sat Jan 14 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
+- Update to Stardog 4.2.2
 
+# TODO
 #separate rpm for javadoc? client? server?
-#selinux
-#intercept calls to stardog-admin server start/stop and redirecto so systemd?
-#check that files in /opt/stardog are owned by stardog user and group
-
