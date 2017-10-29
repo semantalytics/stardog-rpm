@@ -1,13 +1,13 @@
 %define __jar_repack %{nil}
 
 Name: stardog
-Version: 4.2.2
+Version: 5.0.4
 Release: 1.centos7
 Summary: Stardog database
 Group: Applications/Databases
 License: Stardog
 URL: http://docs.stardog.com
-Source0: stardog-4.2.2.zip
+Source0: stardog-5.0.4.zip
 BuildArch: noarch
 Packager: Zachary Whitley <zachary.whitley@semantalytics.com>
 
