@@ -7,7 +7,7 @@ Summary: Stardog database
 Group: Applications/Databases
 License: Stardog
 URL: http://docs.stardog.com
-Source0: stardog-5.0.4.zip
+Source0: stardog-5.0.5.zip
 BuildArch: noarch
 Packager: Zachary Whitley <zachary.whitley@semantalytics.com>
 
@@ -20,7 +20,7 @@ Stardog is an enterprise data unification platform built on smart graph technolo
 %pre
 getent group stardog >/dev/null || groupadd -r stardog
 getent passwd stardog >/dev/null || \
-    useradd --gid stardog --shell /sbin/nologin --home-dir /opt/stardog \
+    useradd --gid stardog --shell /sbin/nologin --home-dir /opt/stardog --no-create-home \
     --comment "Stardog database system account" stardog
 exit 0
 
@@ -33,10 +33,10 @@ mkdir ${RPM_BUILD_ROOT}
 mkdir -p ${RPM_BUILD_ROOT}/opt/stardog
 
 mkdir -p ${RPM_BUILD_ROOT}%{_mandir}/man1
-cp docs/man/Man1/* ${RPM_BUILD_ROOT}%{_mandir}/man1
+cp docs/man/man1/* ${RPM_BUILD_ROOT}%{_mandir}/man1
 
 mkdir -p ${RPM_BUILD_ROOT}%{_mandir}/man8
-cp docs/man/Man8/* ${RPM_BUILD_ROOT}%{_mandir}/man8
+cp docs/man/man8/* ${RPM_BUILD_ROOT}%{_mandir}/man8
 
 cp -r bin client docs server webconsole ${RPM_BUILD_ROOT}/opt/stardog
 
@@ -364,7 +364,8 @@ cat << EOF > ${RPM_BUILD_ROOT}/etc/sysconfig/stardog
 STARDOG_HOME="/var/lib/stardog"
 STARDOG="/opt/stardog"
 STARDOG_JAVA_ARGS="-Xmx2g -Xms2g -XX:MaxDirectMemorySize=1g"
-STARDOG_PERF_JAVA_ARGS="-XX:SoftRefLRUPolicyMSPerMB=1 -XX:+UseParallelOldGC -XX:+UseCompressedOops"
+STARDOG_SERVER_JAVA_ARGS="-Xmx2g -Xms2g -XX:MaxDirectMemorySize=1g"
+STARDOG_EXT="/opt/stardog-ext"
 EOF
 
 mkdir -p ${RPM_BUILD_ROOT}/usr/lib/systemd/system
@@ -400,6 +401,7 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_bindir}/stardog-admin
 %attr(554,stardog,stardog)/opt/stardog/bin/stardog
 %attr(554,stardog,stardog)/opt/stardog/bin/stardog-admin
+%dir%attr(750,stardog,stardog)/opt/stardog-ext
 %dir%attr(750,stardog,stardog)/opt/stardog
 %dir%attr(750,stardog,stardog)/opt/stardog/bin
 %dir%attr(750,stardog,stardog)/opt/stardog/client
