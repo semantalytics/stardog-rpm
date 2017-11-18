@@ -7,7 +7,7 @@ Summary: Stardog database
 Group: Applications/Databases
 License: Stardog
 URL: http://docs.stardog.com
-Source0: stardog-5.0.5.zip
+Source0: stardog-5.0.5.1.zip
 BuildArch: noarch
 Packager: Zachary Whitley <zachary.whitley@semantalytics.com>
 
