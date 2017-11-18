@@ -442,14 +442,14 @@ rm -rf ${RPM_BUILD_ROOT}
 %attr(644,root,root)/usr/lib/systemd/system/stardog.service
 
 %changelog
-* Sat Jan 14 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
-- Update to Stardog 4.2.2
-* Sun Oct 02 2016 Zachary Whitley <zachary.whitley@semantalytics.com>
-- Initial spec
 * Sat Nov 18 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
 - Bump version to 5.0.5.1
 - Surpress creating home directory for stardog user
 - Add env variable for extensions and server java args
+* Sat Jan 14 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
+- Update to Stardog 4.2.2
+* Sun Oct 02 2016 Zachary Whitley <zachary.whitley@semantalytics.com>
+- Initial spec
 
 # TODO
 #separate rpm for javadoc? client? server?
