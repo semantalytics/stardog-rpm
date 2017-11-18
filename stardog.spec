@@ -1,7 +1,7 @@
 %define __jar_repack %{nil}
 
 Name: stardog
-Version: 5.0.5
+Version: 5.0.5.1
 Release: 1.centos7
 Summary: Stardog database
 Group: Applications/Databases
