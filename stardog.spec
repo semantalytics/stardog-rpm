@@ -40,7 +40,7 @@ cp docs/man/man8/* ${RPM_BUILD_ROOT}%{_mandir}/man8
 
 cp -r bin client docs server webconsole ${RPM_BUILD_ROOT}/opt/stardog
 
-mkdir -p ${RPM_BUILD_ROOT}/opt/stardog/server/ext
+mkdir -p ${RPM_BUILD_ROOT}/opt/stardog-ext
 
 mkdir -p ${RPM_BUILD_ROOT}/etc/bash_completion.d
 cp bin/stardog-completion.sh ${RPM_BUILD_ROOT}/etc/bash_completion.d
@@ -444,6 +444,7 @@ rm -rf ${RPM_BUILD_ROOT}
 %changelog
 * Sun Dec 17 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
 - Update verstion to 5.1.0
+- Fix ext directory
 * Sat Nov 18 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
 - Bump version to 5.0.5.1
 - Surpress creating home directory for stardog user
