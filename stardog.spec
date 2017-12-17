@@ -379,7 +379,7 @@ After=syslog.target network.target
 Type=simple
 EnvironmentFile=-/etc/sysconfig/stardog
 ExecStart=/usr/bin/stardog-admin server start $STARDOG_OPTS --foreground
-ExecStop=/urs/bin/stardog-admin server stop
+ExecStop=/usr/bin/stardog-admin server stop
 User=stardog
 Group=stardog
 
