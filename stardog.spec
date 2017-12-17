@@ -1,13 +1,13 @@
 %define __jar_repack %{nil}
 
 Name: stardog
-Version: 5.0.5.1
+Version: 5.1.0
 Release: 1.centos7
 Summary: Stardog database
 Group: Applications/Databases
 License: Stardog
 URL: http://docs.stardog.com
-Source0: stardog-5.0.5.1.zip
+Source0: stardog-5.0.1.zip
 BuildArch: noarch
 Packager: Zachary Whitley <zachary.whitley@semantalytics.com>
 
@@ -442,6 +442,8 @@ rm -rf ${RPM_BUILD_ROOT}
 %attr(644,root,root)/usr/lib/systemd/system/stardog.service
 
 %changelog
+# Sun Dec 17 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
+- Update verstion to 5.1.0
 * Sat Nov 18 2017 Zachary Whitley <zachary.whitley@semantalytics.com>
 - Bump version to 5.0.5.1
 - Surpress creating home directory for stardog user
